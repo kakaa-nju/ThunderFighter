@@ -1,0 +1,45 @@
+{
+    "启动雷霆战机": {
+        "action": "StartApp",
+        "package": "com.a5game.ltzj.jj",
+        "post_delay": 5000,
+        "next": [
+            "点击立即启航"
+        ],
+        "interrupt": [
+            "同意隐私政策",
+            "关闭公告"
+        ]
+    },
+    "同意隐私政策": {
+        "recognition": "OCR",
+        "expected": "同意",
+        "action": "Click",
+        "post_delay": 5000,
+        "roi": [
+            495,
+            793,
+            54,
+            35
+        ]
+    },
+    "关闭公告": {
+        "recognition": "OCR",
+        "expected": "我知道了",
+        "action": "Click",
+        "post_wait_freezes": 100
+    },
+    "点击立即启航": {
+        "recognition": "OCR",
+        "expected": "点击立即启航",
+        "action": "Click",
+        "post_delay": 7000,
+        "roi": [
+            174,
+            1006,
+            363,
+            54
+        ],
+        "next": []
+    }
+}

@@ -1,0 +1,124 @@
+{
+    "金币赛场": {
+        "recognition": "TemplateMatch",
+        "template": "../image/金币赛场.png",
+        "action": "Click",
+        "roi": [
+            88,
+            667,
+            199,
+            50
+        ],
+        "post_delay": 1000,
+        "post_wait_freezes": 100,
+        "next": [
+            "选择助战"
+        ]
+    },
+    "选择助战": {
+        "action": "Click",
+        "target": [
+            26,
+            860,
+            676,
+            139
+        ],
+        "post_delay": 1000,
+        "post_wait_freezes": 100,
+        "next": [
+            "出击"
+        ]
+    },
+    "出击": {
+        "action": "Click",
+        "target": [
+            231,
+            1169,
+            253,
+            58
+        ],
+        "post_delay": 1000,
+        "post_wait_freezes": 100,
+        "next": [
+            "匹配"
+        ]
+    },
+    "匹配": {
+        "action": "Click",
+        "target": [
+            231,
+            1169,
+            253,
+            58
+        ],
+        "post_delay": 150000,
+        "timeout": 400000,
+        "post_wait_freezes": 10000,
+        "next": [
+            "无尽结算继续"
+        ],
+        "interrupt": [
+            "领取无尽奖励"
+        ]
+    },
+    "领取无尽奖励": {
+        "recognition": "OCR",
+        "expected": "领取",
+        "action": "Click",
+        "post_wait_freezes": 100,
+        "next": []
+    },
+    "无尽结算继续": {
+        "recognition": "OCR",
+        "expected": "继续",
+        "action": "Click",
+        "post_wait_freezes": 100,
+        "next": [
+            "无尽对战结算返回"
+        ],
+        "interrupt": []
+    },
+    "无尽对战结算返回": {
+        "recognition": "OCR",
+        "expected": "返回",
+        "action": "Click",
+        "post_wait_freezes": 100,
+        "next": [
+            "SetReplaysTimes"
+        ]
+    },
+    "SetReplaysTimes": {
+        "action": "Custom",
+        "custom_action": "Count",
+        "custom_action_param": {
+            "count": 0,
+            "target_count": 0,
+            "next_node": [
+                "无尽对战结束返回主页"
+            ],
+            "else_node": [
+                "金币赛场"
+            ],
+            "next_node_msg": "已达到目标次数，执行下一节点 {next_node}",
+            "else_node_msg": "未达到目标次数，执行备用节点 {else_node}",
+            "count_msg": "当前次数: {count}, 目标次数: {target_count}"
+        },
+        "post_wait_freezes": 1000
+    },
+    "无尽对战结束返回主页1": {
+        "recognition": "OCR",
+        "expected": "返回",
+        "action": "Click",
+        "post_wait_freezes": 100,
+        "next": [
+            "无尽对战结束返回主页2"
+        ]
+    },
+    "无尽对战结束返回主页2": {
+        "recognition": "OCR",
+        "expected": "返回",
+        "action": "Click",
+        "post_wait_freezes": 100,
+        "next": []
+    }
+}
