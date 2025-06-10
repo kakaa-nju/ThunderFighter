@@ -30,48 +30,8 @@
         },
         {
             "name": "无尽对战",
-            "entry": "无尽模式",
-            "option": [
-                "复现次数"
-            ]
+            "entry": "无尽模式"
         }
     ],
-    "option": {
-        "复现次数": {
-            "cases": [
-                {
-                    "name": "x1",
-                    "pipeline_override": {
-                        "SetReplaysTimes": {
-                            "expected": "1"
-                        }
-                    }
-                },
-                {
-                    "name": "x2",
-                    "pipeline_override": {
-                        "SetReplaysTimes": {
-                            "expected": "2"
-                        }
-                    }
-                },
-                {
-                    "name": "x3",
-                    "pipeline_override": {
-                        "SetReplaysTimes": {
-                            "expected": "3"
-                        }
-                    }
-                },
-                {
-                    "name": "x4",
-                    "pipeline_override": {
-                        "SetReplaysTimes": {
-                            "expected": "4"
-                        }
-                    }
-                }
-            ]
-        }
-    }
+    "option": {}
 }
