@@ -11,6 +11,12 @@
     "关闭广告": {
         "recognition": "FeatureMatch",
         "template": "../image/关闭广告.png",
+        "roi": [
+            590,
+            60,
+            120,
+            60
+        ],
         "action": "Click",
         "timeout": 45000,
         "post_delay": 300,
