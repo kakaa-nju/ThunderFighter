@@ -149,14 +149,16 @@ jobs:
             (cd $f && zip -r ../$f-${{ needs.meta.outputs.tag }}.zip .)
           done
           
-      - uses: softprops/action-gh-release@v2
+      #- uses: softprops/action-gh-release@v2
+      - uses: softprops/action-gh-release@da05d552573ad5aba039eaac05058a918a7bf631
         with:
           files: assets/*
           tag_name: ${{ needs.meta.outputs.tag }}
           body: ${{ needs.changelog.outputs.release_body }}
           draft: false
           
-      - uses: softprops/action-gh-release@v2
+      #- uses: softprops/action-gh-release@v2
+      - uses: softprops/action-gh-release@da05d552573ad5aba039eaac05058a918a7bf631
         with:
           files: assets/*
           tag_name: ${{ needs.meta.outputs.tag }}
