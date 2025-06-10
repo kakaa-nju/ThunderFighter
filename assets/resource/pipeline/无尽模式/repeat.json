@@ -51,9 +51,17 @@
             253,
             58
         ],
-        "post_delay": 150000,
-        "timeout": 400000,
+        "post_delay": 100000,
+        "timeout": 300000,
         "post_wait_freezes": 10000,
+        "next": [
+            "无尽结算"
+        ]
+    },
+    "无尽结算": {
+        "recognition": "TemplateMatch",
+        "template": "../image/无尽结算.png",
+        "rate_limit": 5000,
         "next": [
             "无尽结算继续"
         ],
@@ -91,7 +99,7 @@
         "action": "Custom",
         "custom_action": "Count",
         "custom_action_param": {
-            "count": 0,
+            "count": 1,
             "target_count": 5,
             "next_node": [
                 "无尽对战结束返回主页1"

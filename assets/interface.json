@@ -32,7 +32,7 @@
             "name": "无尽对战",
             "entry": "无尽模式",
             "option": [
-                "复现次数"
+                "重复次数"
             ]
         }
     ],
@@ -44,7 +44,7 @@
                     "pipeline_override": {
                         "SetReplaysTimes": {
                             "custom_action_param": {
-                                "count": 0,
+                                "count": 1,
                                 "target_count": 1,
                                 "next_node": [
                                     "无尽对战结束返回主页1"
@@ -62,7 +62,7 @@
                     "pipeline_override": {
                         "SetReplaysTimes": {
                             "custom_action_param": {
-                                "count": 0,
+                                "count": 1,
                                 "target_count": 2,
                                 "next_node": [
                                     "无尽对战结束返回主页1"
@@ -80,7 +80,7 @@
                     "pipeline_override": {
                         "SetReplaysTimes": {
                             "custom_action_param": {
-                                "count": 0,
+                                "count": 1,
                                 "target_count": 3,
                                 "next_node": [
                                     "无尽对战结束返回主页1"
@@ -98,7 +98,7 @@
                     "pipeline_override": {
                         "SetReplaysTimes": {
                             "custom_action_param": {
-                                "count": 0,
+                                "count": 1,
                                 "target_count": 4,
                                 "next_node": [
                                     "无尽对战结束返回主页1"
@@ -116,7 +116,7 @@
                     "pipeline_override": {
                         "SetReplaysTimes": {
                             "custom_action_param": {
-                                "count": 0,
+                                "count": 1,
                                 "target_count": 5,
                                 "next_node": [
                                     "无尽对战结束返回主页1"

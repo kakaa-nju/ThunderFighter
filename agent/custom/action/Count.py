@@ -54,7 +54,6 @@ class Count(CustomAction):
         else_node_msg: 未达到目标次数时执行的节点时的提示消息 可以为空 可以使用 {else_node} 来引用 else_node 中的节点名称
         count_msg: 每次执行时的提示消息 可以为空 可以使用 {count} 来引用 count 中的当前次数 可以使用 {target_count} 来引用 target_count 中的目标次数
         """
-        print("my_action_222 is running!")
         argv_dict: dict = json.loads(argv.custom_action_param)
         if not argv_dict:
             return CustomAction.RunResult(success=True)
