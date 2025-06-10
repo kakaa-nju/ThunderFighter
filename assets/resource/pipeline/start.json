@@ -30,16 +30,24 @@
         "post_wait_freezes": 100
     },
     "点击立即启航": {
-        "recognition": "OCR",
-        "expected": "点击立即启航",
+        "recognition": "TemplateMatch",
+        "template": "../image/启动界面.png",
         "action": "Click",
-        "post_delay": 7000,
-        "roi": [
+        "target": [
             174,
             1006,
             363,
             54
         ],
+        "post_delay": 3000,
+        "next": [
+            "主界面"
+        ]
+    },
+    "主界面": {
+        "recognition": "TemplateMatch",
+        "template": "../image/主界面.png",
+        "post_delay": 100,
         "next": []
     }
 }

@@ -30,8 +30,106 @@
         },
         {
             "name": "无尽对战",
-            "entry": "无尽模式"
+            "entry": "无尽模式",
+            "option": [
+                "复现次数"
+            ]
         }
     ],
-    "option": {}
+    "option": {
+        "重复次数": {
+            "cases": [
+                {
+                    "name": "x1",
+                    "pipeline_override": {
+                        "SetReplaysTimes": {
+                            "custom_action_param": {
+                                "count": 0,
+                                "target_count": 1,
+                                "next_node": [
+                                    "无尽对战结束返回主页1"
+                                ],
+                                "else_node": [
+                                    "金币赛场"
+                                ],
+                                "count_msg": "当前次数: {count}, 目标次数: {target_count}"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "x2",
+                    "pipeline_override": {
+                        "SetReplaysTimes": {
+                            "custom_action_param": {
+                                "count": 0,
+                                "target_count": 2,
+                                "next_node": [
+                                    "无尽对战结束返回主页1"
+                                ],
+                                "else_node": [
+                                    "金币赛场"
+                                ],
+                                "count_msg": "当前次数: {count}, 目标次数: {target_count}"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "x3",
+                    "pipeline_override": {
+                        "SetReplaysTimes": {
+                            "custom_action_param": {
+                                "count": 0,
+                                "target_count": 3,
+                                "next_node": [
+                                    "无尽对战结束返回主页1"
+                                ],
+                                "else_node": [
+                                    "金币赛场"
+                                ],
+                                "count_msg": "当前次数: {count}, 目标次数: {target_count}"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "x4",
+                    "pipeline_override": {
+                        "SetReplaysTimes": {
+                            "custom_action_param": {
+                                "count": 0,
+                                "target_count": 4,
+                                "next_node": [
+                                    "无尽对战结束返回主页1"
+                                ],
+                                "else_node": [
+                                    "金币赛场"
+                                ],
+                                "count_msg": "当前次数: {count}, 目标次数: {target_count}"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "x5",
+                    "pipeline_override": {
+                        "SetReplaysTimes": {
+                            "custom_action_param": {
+                                "count": 0,
+                                "target_count": 5,
+                                "next_node": [
+                                    "无尽对战结束返回主页1"
+                                ],
+                                "else_node": [
+                                    "金币赛场"
+                                ],
+                                "count_msg": "当前次数: {count}, 目标次数: {target_count}"
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    }
 }
