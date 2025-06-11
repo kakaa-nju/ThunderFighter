@@ -37,14 +37,13 @@
         "next": []
     },
     "返回主页": {
-        "recognition": "OCR",
-        "expected": "广告",
-        "inverse": true,
+        "recognition": "TemplateMatch",
+        "template": "../image/商城奖励领取完毕.png",
         "roi": [
-            72,
-            1001,
-            603,
-            36
+            18,
+            990,
+            686,
+            63
         ],
         "action": "Click",
         "target": [
