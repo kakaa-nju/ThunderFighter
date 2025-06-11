@@ -51,22 +51,29 @@
             253,
             58
         ],
-        "post_delay": 100000,
+        "post_delay": 60000,
         "timeout": 300000,
-        "post_wait_freezes": 10000,
+        "post_wait_freezes": 1000,
+        "rate_limit": 5000,
         "next": [
             "无尽结算"
-        ],
-        "interrupt": [
-            "领取无尽奖励"
         ]
     },
     "无尽结算": {
-        "recognition": "TemplateMatch",
+        "recognition": "FeatureMatch",
         "template": "../image/无尽结算.png",
-        "rate_limit": 5000,
+        "roi": [
+            0,
+            23,
+            114,
+            36
+        ],
+        "inverse": true,
         "next": [
             "无尽结算继续"
+        ],
+        "interrupt": [
+            "领取无尽奖励"
         ]
     },
     "领取无尽奖励": {
