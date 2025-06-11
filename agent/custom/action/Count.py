@@ -73,7 +73,6 @@ class Count(CustomAction):
             # 输出计数提示（使用更新后的计数）
             if count_msg:
                 self.custom_notify(
-                    context,
                     count_msg.format(count=new_count - 1, target_count=target_count),
                 )
 
@@ -88,8 +87,8 @@ class Count(CustomAction):
                 node_str = (
                     else_nodes if isinstance(else_nodes, str) else ", ".join(else_nodes)
                 )
-                self.custom_notify(context, else_node_msg.format(else_node=node_str))
-            self._run_nodes(context, else_nodes)
+                self.custom_notify(else_node_msg.format(else_node=node_str))
+            self._run_nodes(argv, context, else_nodes)
         else:
             # 计数达标时：重置计数并执行下一节点
             reset_params = {
@@ -114,21 +113,21 @@ class Count(CustomAction):
                 node_str = (
                     next_nodes if isinstance(next_nodes, str) else ", ".join(next_nodes)
                 )
-                self.custom_notify(context, next_node_msg.format(next_node=node_str))
-            self._run_nodes(context, next_nodes)
+                self.custom_notify(next_node_msg.format(next_node=node_str))
+            self._run_nodes(argv, context, next_nodes)
 
         return CustomAction.RunResult(success=True)
 
-    def _run_nodes(self, context: Context, nodes: str | list[str] | None):
+    def _run_nodes(self, argv, context: Context, nodes: str | list[str] | None):
         """统一处理节点执行逻辑"""
         if not nodes:
             return
         # 确保节点列表为列表类型
         if isinstance(nodes, str):
             nodes = [nodes]
-        for node in nodes:
-            context.run_task(node)
+        print("override")
+        context.override_next(argv.node_name, nodes)
+        return
 
-    def custom_notify(self, context: Context, msg):
-        context.override_pipeline({"custom通知": {"focus": {"succeeded": msg}}})
-        context.run_task("custom通知")
+    def custom_notify(self, msg):
+        print(msg)
