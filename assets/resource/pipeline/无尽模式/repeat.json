@@ -56,6 +56,9 @@
         "post_wait_freezes": 10000,
         "next": [
             "无尽结算"
+        ],
+        "interrupt": [
+            "领取无尽奖励"
         ]
     },
     "无尽结算": {
@@ -64,15 +67,13 @@
         "rate_limit": 5000,
         "next": [
             "无尽结算继续"
-        ],
-        "interrupt": [
-            "领取无尽奖励"
         ]
     },
     "领取无尽奖励": {
         "recognition": "OCR",
         "expected": "领取",
         "action": "Click",
+        "rate_limit": 5000,
         "post_wait_freezes": 100,
         "next": []
     },
