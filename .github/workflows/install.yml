@@ -91,6 +91,12 @@ jobs:
           rm -f "${ARCHIVE_FILE_PATH}"
           echo "Archive cleanup command executed for MFAAvalonia."
 
+      - name: Debug tag
+        run: |
+          echo "Received tag from meta: '${{ needs.meta.outputs.tag }}'"
+          echo "Is release: '${{ needs.meta.outputs.is_release }}'"
+
+
       - name: Install
         shell: bash
         run: |
@@ -110,7 +116,7 @@ jobs:
 
       - uses: actions/upload-artifact@v4
         with:
-          name: MaaXXX-${{ matrix.os }}-${{ matrix.arch }}
+          name: MaaTF-${{ matrix.os }}-${{ matrix.arch }}
           path: "install"
 
   changelog:
@@ -156,10 +162,6 @@ jobs:
           tag_name: ${{ needs.meta.outputs.tag }}
           body: ${{ needs.changelog.outputs.release_body }}
           draft: false
-          
-      #- uses: softprops/action-gh-release@v2
-      - uses: softprops/action-gh-release@da05d552573ad5aba039eaac05058a918a7bf631
-        with:
-          files: assets/*
-          tag_name: ${{ needs.meta.outputs.tag }}
+          prerelease: false
           generate_release_notes: true
+          
