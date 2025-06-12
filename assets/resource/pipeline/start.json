@@ -4,7 +4,8 @@
         "package": "com.a5game.ltzj.jj",
         "post_delay": 5000,
         "next": [
-            "点击立即启航"
+            "点击立即启航",
+            "主界面"
         ],
         "interrupt": [
             "同意隐私政策",
@@ -42,7 +43,73 @@
         "post_delay": 3000,
         "next": [
             "主界面"
+        ],
+        "interrupt": [
+            "每日首次登录"
         ]
+    },
+    "每日首次登录": {
+        "recognition": "TemplateMatch",
+        "template": "../image/累计登录.png",
+        "roi": [
+            226,
+            179,
+            373,
+            88
+        ],
+        "next": [
+            "每日签到奖励"
+        ],
+        "interrupt": [
+            "累计签到奖励"
+        ]
+    },
+    "每日签到奖励": {
+        "recognition": "TemplateMatch",
+        "template": "../image/累计奖励.png",
+        "inverse": true,
+        "roi": [
+            156,
+            490,
+            545,
+            143
+        ],
+        "action": "Click",
+        "target": [
+            223,
+            1053,
+            269,
+            173
+        ],
+        "next": [
+            "领取签到奖励"
+        ]
+    },
+    "累计签到奖励": {
+        "recognition": "TemplateMatch",
+        "template": "../image/累计奖励.png",
+        "roi": [
+            156,
+            490,
+            545,
+            143
+        ],
+        "action": "Click",
+        "next": [
+            "领取签到奖励"
+        ]
+    },
+    "领取签到奖励": {
+        "recognition": "TemplateMatch",
+        "template": "../image/扫荡完成.png",
+        "roi": [
+            77,
+            316,
+            582,
+            159
+        ],
+        "action": "Click",
+        "post_wait_freezes": 100
     },
     "主界面": {
         "recognition": "TemplateMatch",
