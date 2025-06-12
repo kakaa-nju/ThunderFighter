@@ -29,9 +29,7 @@
         "action": "Click",
         "post_delay": 2000,
         "post_wait_freezes": 100,
-        "next": [
-            "快速探索结束"
-        ],
+        "next": [],
         "interrupt": [
             "每日首次领取",
             "观看广告领取奖励"
