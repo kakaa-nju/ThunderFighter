@@ -69,7 +69,8 @@
             36
         ],
         "inverse": true,
-        "post_delay": 500,
+        "post_delay": 1500,
+        "post_wait_freezes": 500,
         "next": [
             "无尽结算继续"
         ],
@@ -87,18 +88,23 @@
             83
         ],
         "action": "Click",
-        "rate_limit": 5000,
-        "post_wait_freezes": 100,
+        "target": [
+            234,
+            1039,
+            254,
+            83
+        ],
+        "post_wait_freezes": 500,
         "next": []
     },
     "无尽结算继续": {
         "recognition": "TemplateMatch",
         "template": "../image/无尽结算继续.png",
         "roi": [
-            235,
-            1078,
-            253,
-            83
+            230,
+            1090,
+            270,
+            120
         ],
         "action": "Click",
         "pre_wait_freezes": 500,
@@ -112,7 +118,8 @@
         "recognition": "OCR",
         "expected": "返回",
         "action": "Click",
-        "post_wait_freezes": 100,
+        "pre_wait_freezes": 300,
+        "post_wait_freezes": 300,
         "next": [
             "SetReplaysTimes"
         ]
