@@ -56,7 +56,9 @@
                     "custom_action_param": {
                         "count": 1,
                         "target_count": 5,
-                        "next_node": [],
+                        "next_node": [
+                            "无尽对战结束返回主页1"
+                        ],
                         "else_node": [
                             "金币赛场"
                         ],

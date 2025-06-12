@@ -125,7 +125,6 @@ class Count(CustomAction):
         # 确保节点列表为列表类型
         if isinstance(nodes, str):
             nodes = [nodes]
-        print("override")
         context.override_next(argv.node_name, nodes)
         return
 
