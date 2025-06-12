@@ -1,0 +1,168 @@
+{
+    "点击星际探索": {
+        "recognition": "TemplateMatch",
+        "template": "../image/星际探索.png",
+        "roi": [
+            14,
+            713,
+            108,
+            104
+        ],
+        "action": "Click",
+        "post_wait_freezes": 100,
+        "next": [
+            "快速探索结束"
+        ],
+        "interrupt": [
+            "点击快速探索"
+        ]
+    },
+    "点击快速探索": {
+        "recognition": "TemplateMatch",
+        "template": "../image/快速探索.png",
+        "roi": [
+            106,
+            1046,
+            210,
+            64
+        ],
+        "action": "Click",
+        "post_delay": 2000,
+        "post_wait_freezes": 100,
+        "next": [
+            "快速探索结束"
+        ],
+        "interrupt": [
+            "每日首次领取",
+            "观看广告领取奖励"
+        ]
+    },
+    "每日首次领取": {
+        "recognition": "OCR",
+        "roi": [
+            256,
+            858,
+            211,
+            63
+        ],
+        "expected": "免费领取",
+        "action": "Click",
+        "target": [
+            256,
+            858,
+            211,
+            63
+        ],
+        "post_wait_freezes": 100,
+        "next": [
+            "广告后领取奖励"
+        ]
+    },
+    "观看广告领取奖励": {
+        "recognition": "OCR",
+        "roi": [
+            256,
+            858,
+            211,
+            63
+        ],
+        "expected": "领取",
+        "action": "Click",
+        "target": [
+            256,
+            858,
+            211,
+            63
+        ],
+        "rate_limit": 5000,
+        "post_wait_freezes": 100,
+        "next": [
+            "广告后领取奖励"
+        ],
+        "interrupt": [
+            "等待广告结束"
+        ]
+    },
+    "广告后领取奖励": {
+        "recognition": "OCR",
+        "expected": "领取",
+        "roi": [
+            234,
+            1039,
+            254,
+            83
+        ],
+        "action": "Click",
+        "rate_limit": 5000,
+        "post_wait_freezes": 100,
+        "next": [],
+        "interrupt": []
+    },
+    "快速探索结束": {
+        "recognition": "TemplateMatch",
+        "template": "../image/快速探索2.png",
+        "roi": [
+            106,
+            1046,
+            210,
+            64
+        ],
+        "post_delay": 500,
+        "post_wait_freezes": 100,
+        "next": [
+            "星际探索返回主页"
+        ],
+        "interrupt": [
+            "领取挂机奖励"
+        ]
+    },
+    "领取挂机奖励": {
+        "recognition": "TemplateMatch",
+        "template": "../image/挂机奖励.png",
+        "roi": [
+            406,
+            1047,
+            209,
+            63
+        ],
+        "action": "Click",
+        "post_delay": 500,
+        "post_wait_freezes": 100,
+        "next": [
+            "领取挂机奖励2"
+        ],
+        "interrupt": []
+    },
+    "领取挂机奖励2": {
+        "recognition": "OCR",
+        "expected": "领取",
+        "roi": [
+            234,
+            1039,
+            254,
+            83
+        ],
+        "action": "Click",
+        "rate_limit": 5000,
+        "post_wait_freezes": 100,
+        "next": [],
+        "interrupt": []
+    },
+    "星际探索返回主页": {
+        "recognition": "TemplateMatch",
+        "template": "../image/探索结束返回.png",
+        "roi": [
+            106,
+            1046,
+            511,
+            67
+        ],
+        "action": "Click",
+        "target": [
+            618,
+            145,
+            65,
+            91
+        ]
+    }
+}
