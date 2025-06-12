@@ -39,6 +39,7 @@
     "返回主页": {
         "recognition": "TemplateMatch",
         "template": "../image/商城奖励领取完毕.png",
+        "threshold": 0.9,
         "roi": [
             18,
             990,
