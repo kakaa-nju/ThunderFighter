@@ -91,12 +91,6 @@ jobs:
           rm -f "${ARCHIVE_FILE_PATH}"
           echo "Archive cleanup command executed for MFAAvalonia."
 
-      - name: Debug tag
-        run: |
-          echo "Received tag from meta: '${{ needs.meta.outputs.tag }}'"
-          echo "Is release: '${{ needs.meta.outputs.is_release }}'"
-
-
       - name: Install
         shell: bash
         run: |
