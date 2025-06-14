@@ -11,10 +11,11 @@
         "action": "Click",
         "post_wait_freezes": 100,
         "next": [
-            "快速探索结束"
+            "星际探索返回主页"
         ],
         "interrupt": [
-            "点击快速探索"
+            "点击快速探索",
+            "领取挂机奖励"
         ]
     },
     "点击快速探索": {
@@ -29,7 +30,9 @@
         "action": "Click",
         "post_delay": 2000,
         "post_wait_freezes": 100,
-        "next": [],
+        "next": [
+            "快速探索结束"
+        ],
         "interrupt": [
             "每日首次领取",
             "观看广告领取奖励"
@@ -91,6 +94,12 @@
             83
         ],
         "action": "Click",
+        "target": [
+            234,
+            1039,
+            254,
+            83
+        ],
         "rate_limit": 5000,
         "post_wait_freezes": 100,
         "next": [],
@@ -107,12 +116,8 @@
         ],
         "post_delay": 500,
         "post_wait_freezes": 100,
-        "next": [
-            "星际探索返回主页"
-        ],
-        "interrupt": [
-            "领取挂机奖励"
-        ]
+        "next": [],
+        "interrupt": []
     },
     "领取挂机奖励": {
         "recognition": "TemplateMatch",
@@ -141,6 +146,12 @@
             83
         ],
         "action": "Click",
+        "target": [
+            234,
+            1039,
+            254,
+            83
+        ],
         "rate_limit": 5000,
         "post_wait_freezes": 100,
         "next": [],
