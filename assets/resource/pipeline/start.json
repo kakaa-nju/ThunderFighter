@@ -59,29 +59,23 @@
             373,
             88
         ],
-        "next": [],
+        "next": [
+            "not累计签到奖励"
+        ],
         "interrupt": [
-            "累计签到奖励",
-            "每日签到奖励"
+            "累计签到奖励"
         ]
     },
     "每日签到奖励": {
         "recognition": "TemplateMatch",
-        "template": "../image/累计奖励.png",
-        "inverse": true,
+        "template": "../image/签到奖励.png",
         "roi": [
-            156,
-            490,
-            545,
-            143
-        ],
-        "action": "Click",
-        "target": [
             223,
             1053,
             269,
             173
         ],
+        "action": "Click",
         "next": [
             "关闭签到页面"
         ],
@@ -99,8 +93,27 @@
             143
         ],
         "action": "Click",
-        "interrupt": [
+        "post_delay": 800,
+        "post_wait_freezes": 500,
+        "next": [
             "领取签到奖励"
+        ]
+    },
+    "not累计签到奖励": {
+        "recognition": "TemplateMatch",
+        "template": "../image/累计奖励.png",
+        "inverse": true,
+        "roi": [
+            156,
+            490,
+            545,
+            143
+        ],
+        "action": "Click",
+        "post_delay": 800,
+        "post_wait_freezes": 500,
+        "next": [
+            "每日签到奖励"
         ]
     },
     "领取签到奖励": {
@@ -117,6 +130,14 @@
         "next": []
     },
     "关闭签到页面": {
+        "recognition": "TemplateMatch",
+        "template": "../image/已领取签到奖励.png",
+        "roi": [
+            214,
+            1052,
+            289,
+            62
+        ],
         "action": "Click",
         "target": [
             662,
