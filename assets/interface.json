@@ -47,7 +47,7 @@
     "advanced": {
         "重复次数": {
             "field": [
-                "x"
+                "重复次数"
             ],
             "type": [
                 "int"
@@ -59,7 +59,7 @@
                 "SetReplaysTimes": {
                     "custom_action_param": {
                         "count": 1,
-                        "target_count": 5,
+                        "target_count": "{重复次数}",
                         "next_node": [
                             "无尽对战结束返回主页1"
                         ],
