@@ -1,6 +1,7 @@
 {
     "name": "MAA-ThunderFighter",
-    "version": "0.9.4",
+    "version": "0.9.12",
+    "url": "https://github.com/kakaa-nju/ThunderFighter",
     "custom_title": "雷霆战机长草助手",
     "controller": [
         {
