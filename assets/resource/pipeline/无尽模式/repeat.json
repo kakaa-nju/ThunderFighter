@@ -107,7 +107,7 @@
             120
         ],
         "action": "Click",
-        "pre_wait_freezes": 500,
+        "pre_wait_freezes": 200,
         "post_wait_freezes": 100,
         "next": [
             "无尽对战结算返回"
@@ -118,7 +118,7 @@
         "recognition": "OCR",
         "expected": "返回",
         "action": "Click",
-        "pre_wait_freezes": 300,
+        "pre_wait_freezes": 200,
         "post_wait_freezes": 300,
         "next": [
             "SetReplaysTimes"

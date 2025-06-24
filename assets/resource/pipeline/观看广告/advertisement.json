@@ -3,7 +3,7 @@
         "pre_delay": 35000,
         "timeout": 45000,
         "post_delay": 300,
-        "post_wait_freezes": 1000,
+        "post_wait_freezes": 500,
         "next": [
             "关闭广告"
         ]
@@ -20,7 +20,7 @@
         "action": "Click",
         "timeout": 45000,
         "post_delay": 300,
-        "post_wait_freezes": 500,
+        "post_wait_freezes": 300,
         "next": []
     }
 }
