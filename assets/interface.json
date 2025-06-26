@@ -37,6 +37,33 @@
             "entry": "点击星际探索"
         },
         {
+            "name": "无尽闪击",
+            "entry": "无尽模式",
+            "advanced": [
+                "重复次数"
+            ],
+            "pipeline_override": {
+                "出击": {
+                    "next": [
+                        "闪击匹配"
+                    ]
+                },
+                "SetReplaysTimes": {
+                    "custom_action_param": {
+                        "count": 1,
+                        "target_count": 2,
+                        "next_node": [
+                            "无尽对战结束返回主页1"
+                        ],
+                        "else_node": [
+                            "金币赛场"
+                        ],
+                        "count_msg": "当前次数: {count}, 目标次数: {target_count}"
+                    }
+                }
+            }
+        },
+        {
             "name": "无尽对战",
             "entry": "无尽模式",
             "advanced": [

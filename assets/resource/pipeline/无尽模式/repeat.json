@@ -44,13 +44,33 @@
         ]
     },
     "匹配": {
+        "recognition": "TemplateMatch",
+        "template": "../image/匹配.png",
         "action": "Click",
-        "target": [
-            231,
-            1169,
-            253,
-            58
-        ],
+        "post_delay": 60000,
+        "timeout": 300000,
+        "post_wait_freezes": 1000,
+        "rate_limit": 5000,
+        "next": [
+            "无尽结算"
+        ]
+    },
+    "闪击匹配": {
+        "recognition": "TemplateMatch",
+        "template": "../image/闪击匹配.png",
+        "action": "Click",
+        "post_delay": 60000,
+        "timeout": 300000,
+        "post_wait_freezes": 1000,
+        "rate_limit": 5000,
+        "next": [
+            "闪击确认"
+        ]
+    },
+    "闪击确认": {
+        "recognition": "TemplateMatch",
+        "template": "../image/闪击确认.png",
+        "action": "Click",
         "post_delay": 60000,
         "timeout": 300000,
         "post_wait_freezes": 1000,
