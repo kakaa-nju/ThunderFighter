@@ -39,9 +39,6 @@
         {
             "name": "无尽闪击",
             "entry": "无尽模式",
-            "advanced": [
-                "重复次数"
-            ],
             "pipeline_override": {
                 "出击": {
                     "next": [
