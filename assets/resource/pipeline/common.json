@@ -1,0 +1,14 @@
+{
+    "返回主页": {
+        "recognition": "TemplateMatch",
+        "template": "首页图标.png",
+        "roi": [
+            28,
+            84,
+            76,
+            76
+        ],
+        "action": "Click",
+        "post_wait_freezes": 200
+    }
+}
