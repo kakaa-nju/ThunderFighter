@@ -116,8 +116,8 @@
         "next": []
     },
     "无尽结算继续": {
-        "recognition": "TemplateMatch",
-        "template": "../image/无尽结算继续.png",
+        "recognition": "OCR",
+        "expected": "继续",
         "roi": [
             230,
             1070,
@@ -125,6 +125,12 @@
             120
         ],
         "action": "Click",
+        "target": [
+            230,
+            1070,
+            265,
+            120
+        ],
         "pre_wait_freezes": 200,
         "post_wait_freezes": 100,
         "next": [
