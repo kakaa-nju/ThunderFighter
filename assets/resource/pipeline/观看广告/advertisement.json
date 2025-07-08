@@ -10,7 +10,7 @@
     },
     "关闭广告": {
         "recognition": "FeatureMatch",
-        "template": "../image/关闭广告.png",
+        "template": "关闭广告.png",
         "roi": [
             590,
             60,

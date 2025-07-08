@@ -1,7 +1,7 @@
 {
     "点击星际探索": {
         "recognition": "TemplateMatch",
-        "template": "../image/星际探索.png",
+        "template": "星际探索.png",
         "roi": [
             14,
             713,
@@ -20,7 +20,7 @@
     },
     "点击快速探索": {
         "recognition": "TemplateMatch",
-        "template": "../image/快速探索.png",
+        "template": "快速探索.png",
         "roi": [
             106,
             1046,
@@ -107,7 +107,7 @@
     },
     "快速探索结束": {
         "recognition": "TemplateMatch",
-        "template": "../image/快速探索2.png",
+        "template": "快速探索2.png",
         "roi": [
             106,
             1046,
@@ -121,7 +121,7 @@
     },
     "领取挂机奖励": {
         "recognition": "TemplateMatch",
-        "template": "../image/挂机奖励.png",
+        "template": "挂机奖励.png",
         "roi": [
             406,
             1047,
@@ -159,19 +159,15 @@
     },
     "星际探索返回主页": {
         "recognition": "TemplateMatch",
-        "template": "../image/探索结束返回.png",
+        "template": "探索结束返回.png",
         "roi": [
             106,
             1046,
             511,
             67
         ],
-        "action": "Click",
-        "target": [
-            618,
-            145,
-            65,
-            91
+        "next": [
+            "返回主页"
         ]
     }
 }

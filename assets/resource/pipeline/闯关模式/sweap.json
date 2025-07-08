@@ -12,7 +12,7 @@
     },
     "领取奖励": {
         "recognition": "TemplateMatch",
-        "template": "../image/扫荡完成.png",
+        "template": "扫荡完成.png",
         "roi": [
             77,
             316,

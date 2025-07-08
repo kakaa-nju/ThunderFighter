@@ -1,7 +1,7 @@
 {
     "无尽模式": {
         "recognition": "TemplateMatch",
-        "template": "../image/无尽模式.png",
+        "template": "无尽模式.png",
         "action": "Click",
         "roi": [
             35,
@@ -17,7 +17,7 @@
     },
     "世界竞赛": {
         "recognition": "TemplateMatch",
-        "template": "../image/世界竞赛.png",
+        "template": "世界竞赛.png",
         "action": "Click",
         "roi": [
             373,

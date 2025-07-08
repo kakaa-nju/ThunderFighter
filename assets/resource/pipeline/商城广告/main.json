@@ -1,7 +1,7 @@
 {
     "点击商城": {
         "recognition": "TemplateMatch",
-        "template": "../image/商城.png",
+        "template": "商城.png",
         "action": "Click",
         "post_delay": 2000,
         "post_wait_freezes": 100,
@@ -89,7 +89,7 @@
     },
     "商店奖励领取完毕": {
         "recognition": "TemplateMatch",
-        "template": "../image/商店奖励领取完毕.png",
+        "template": "商店奖励领取完毕.png",
         "threshold": 0.9,
         "roi": [
             18,

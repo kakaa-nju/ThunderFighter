@@ -10,7 +10,8 @@
         ],
         "interrupt": [
             "同意隐私政策",
-            "关闭公告"
+            "关闭公告",
+            "返回主页"
         ]
     },
     "同意隐私政策": {
@@ -33,7 +34,7 @@
     },
     "点击立即启航": {
         "recognition": "TemplateMatch",
-        "template": "../image/启动界面.png",
+        "template": "启动界面.png",
         "action": "Click",
         "target": [
             174,
@@ -52,7 +53,7 @@
     },
     "每日首次登录": {
         "recognition": "TemplateMatch",
-        "template": "../image/累计登录.png",
+        "template": "累计登录.png",
         "post_delay": 300,
         "post_wait_freezes": 300,
         "roi": [
@@ -70,7 +71,7 @@
     },
     "每日签到奖励": {
         "recognition": "TemplateMatch",
-        "template": "../image/签到奖励.png",
+        "template": "签到奖励.png",
         "roi": [
             223,
             1053,
@@ -89,7 +90,7 @@
     },
     "累计签到奖励": {
         "recognition": "TemplateMatch",
-        "template": "../image/累计奖励.png",
+        "template": "累计奖励.png",
         "roi": [
             156,
             490,
@@ -105,7 +106,7 @@
     },
     "not累计签到奖励": {
         "recognition": "TemplateMatch",
-        "template": "../image/累计奖励.png",
+        "template": "累计奖励.png",
         "inverse": true,
         "roi": [
             156,
@@ -139,7 +140,7 @@
     },
     "关闭签到页面": {
         "recognition": "TemplateMatch",
-        "template": "../image/已领取签到奖励.png",
+        "template": "已领取签到奖励.png",
         "roi": [
             214,
             1052,
@@ -154,11 +155,5 @@
             29
         ],
         "pre_wait_freezes": 500
-    },
-    "主界面": {
-        "recognition": "TemplateMatch",
-        "template": "../image/主界面.png",
-        "post_delay": 100,
-        "next": []
     }
 }

@@ -1,7 +1,7 @@
 {
     "金币赛场": {
         "recognition": "TemplateMatch",
-        "template": "../image/金币赛场.png",
+        "template": "金币赛场.png",
         "action": "Click",
         "roi": [
             88,
@@ -45,7 +45,7 @@
     },
     "匹配": {
         "recognition": "TemplateMatch",
-        "template": "../image/匹配.png",
+        "template": "匹配.png",
         "action": "Click",
         "post_delay": 60000,
         "timeout": 300000,
@@ -57,7 +57,7 @@
     },
     "闪击匹配": {
         "recognition": "TemplateMatch",
-        "template": "../image/闪击匹配.png",
+        "template": "闪击匹配.png",
         "action": "Click",
         "post_delay": 1000,
         "post_wait_freezes": 100,
@@ -67,7 +67,7 @@
     },
     "闪击确认": {
         "recognition": "TemplateMatch",
-        "template": "../image/闪击确认.png",
+        "template": "闪击确认.png",
         "action": "Click",
         "post_delay": 60000,
         "timeout": 300000,
@@ -79,7 +79,7 @@
     },
     "无尽结算": {
         "recognition": "FeatureMatch",
-        "template": "../image/无尽结算.png",
+        "template": "无尽结算.png",
         "roi": [
             0,
             23,
@@ -167,42 +167,16 @@
     },
     "无尽对战结束返回主页1": {
         "recognition": "TemplateMatch",
-        "template": "../image/无尽返回1.png",
+        "template": "无尽返回1.png",
         "roi": [
             0,
             1029,
             720,
             251
-        ],
-        "action": "Click",
-        "target": [
-            563,
-            1201,
-            144,
-            51
         ],
         "post_wait_freezes": 100,
         "next": [
-            "无尽对战结束返回主页2"
+            "返回主页"
         ]
-    },
-    "无尽对战结束返回主页2": {
-        "recognition": "TemplateMatch",
-        "template": "../image/无尽返回2.png",
-        "roi": [
-            0,
-            1029,
-            720,
-            251
-        ],
-        "action": "Click",
-        "target": [
-            563,
-            1201,
-            144,
-            51
-        ],
-        "post_wait_freezes": 100,
-        "next": []
     }
 }
