@@ -47,12 +47,8 @@
         "recognition": "TemplateMatch",
         "template": "匹配.png",
         "action": "Click",
-        "post_delay": 60000,
-        "timeout": 300000,
-        "post_wait_freezes": 1000,
-        "rate_limit": 5000,
         "next": [
-            "无尽结算"
+            "无尽对战中"
         ]
     },
     "闪击匹配": {
@@ -69,10 +65,56 @@
         "recognition": "TemplateMatch",
         "template": "闪击确认.png",
         "action": "Click",
-        "post_delay": 60000,
+        "next": [
+            "无尽对战中"
+        ],
+        "interrupt": [
+            "闪击道具确认1"
+        ]
+    },
+    "闪击道具确认1": {
+        "recognition": "OCR",
+        "roi": [
+            41,
+            470,
+            643,
+            346
+        ],
+        "expected": "今日不再提示",
+        "action": "Click",
+        "target": [
+            279,
+            653,
+            33,
+            35
+        ],
+        "post_delay": 100,
+        "next": [
+            "闪击道具确认2"
+        ]
+    },
+    "闪击道具确认2": {
+        "action": "Click",
+        "target": [
+            394,
+            710,
+            208,
+            61
+        ]
+    },
+    "无尽对战中": {
+        "recognition": "FeatureMatch",
+        "template": "无尽结算.png",
+        "roi": [
+            0,
+            23,
+            114,
+            36
+        ],
+        "post_delay": 30000,
         "timeout": 300000,
-        "post_wait_freezes": 1000,
         "rate_limit": 5000,
+        "post_wait_freezes": 500,
         "next": [
             "无尽结算"
         ]
