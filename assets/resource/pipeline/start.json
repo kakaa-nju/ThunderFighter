@@ -42,8 +42,8 @@
             363,
             54
         ],
-        "post_delay": 6000,
-        "post_wait_freezes": 500,
+        "post_delay": 8000,
+        "post_wait_freezes": 800,
         "next": [
             "主界面"
         ],
