@@ -111,10 +111,11 @@
             114,
             36
         ],
-        "post_delay": 30000,
+        "pre_delay": 30000,
         "timeout": 300000,
         "rate_limit": 5000,
-        "post_wait_freezes": 500,
+        "post_delay": 3000,
+        "post_wait_freezes": 800,
         "next": [
             "无尽结算"
         ]
@@ -122,17 +123,17 @@
     "无尽结算": {
         "recognition": "FeatureMatch",
         "template": "无尽结算.png",
+        "inverse": true,
         "roi": [
             0,
             23,
             114,
             36
         ],
-        "inverse": true,
-        "pre_delay": 1500,
-        "pre_wait_freezes": 500,
+        "pre_delay": 2000,
+        "pre_wait_freezes": 800,
         "post_delay": 1500,
-        "post_wait_freezes": 500,
+        "post_wait_freezes": 800,
         "next": [
             "无尽结算继续"
         ],
